@@ -1,6 +1,6 @@
 {
   "name": "langchain",
-  "version": "0.2.15",
+  "version": "0.2.16+cdabnor.0.0.1",
   "description": "Typescript bindings for langchain",
   "type": "module",
   "engines": {
@@ -569,9 +569,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:langchain-ai/langchainjs.git"
+    "url": "git@github.com:cdabnor/langchainjs.git"
   },
-  "homepage": "https://github.com/langchain-ai/langchainjs/tree/main/langchain/",
+  "homepage": "https://github.com/cdabnor/langchainjs/tree/main/langchain/",
   "scripts": {
     "build": "yarn turbo:command build:internal --filter=langchain",
     "build:internal": "yarn lc_build_v2 --create-entrypoints --pre --tree-shaking --gen-maps",
@@ -950,6 +950,7 @@
     "zod-to-json-schema": "^3.22.3"
   },
   "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "keywords": [

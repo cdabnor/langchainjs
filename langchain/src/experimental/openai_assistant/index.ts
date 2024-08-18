@@ -117,8 +117,10 @@ export class OpenAIAssistantRunnable<
             content: input.content,
             file_ids: input.fileIds,
             metadata: input.messagesMetadata,
+            tool_resources: input.messagesToolResources,
           },
         ],
+        tool_resources: input.threadToolResources,
         metadata: input.threadMetadata,
       };
       run = await this._createThreadAndRun({
@@ -248,6 +250,7 @@ export class OpenAIAssistantRunnable<
       "model",
       "tools",
       "run_metadata",
+      "tool_resources",
     ]
       .filter((key) => key in input)
       .reduce((obj, key) => {
